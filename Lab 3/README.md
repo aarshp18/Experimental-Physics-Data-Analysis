@@ -39,5 +39,7 @@ From this regression, the experimental value of gravity was determined to be:
 
 ## Visualizations
 *Figure 1: Velocity vs. Time scatter plot with linear regression fit.*
-![Velocity vs Time Graph](graph_v_t.png)
-*(Note: Ensure you upload an image named graph_v_t.png to this folder)*
+![Velocity vs Time Graph](velocity vs time.jpeg)
+*Figure 2: Position vs. Time scatter plot with linear regression fit.*
+![Position vs Time Graph](position vs time.jpeg)
+
