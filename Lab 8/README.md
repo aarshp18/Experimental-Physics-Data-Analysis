@@ -7,11 +7,11 @@ Building on previous elasticity studies, this project utilized improved data acq
 The experiment employed two physical models to characterize the system:
 
 1.  **Static Characterization:**
-    * [cite_start]Measured spring extension ($\Delta x$) under known loads ($F$)[cite: 1110, 1111].
+    * Measured spring extension ($\Delta x$) under known loads ($F$).
     * Calculated the Spring Constant ($k$) via linear regression.
 2.  **Dynamic Mass Determination:**
     * Captured high-frame-rate video of the oscillating system.
-    * [cite_start]Extracted the period ($T$) of the unknown mass using **Tracker Video Analysis** software[cite: 1114].
+    * Extracted the period ($T$) of the unknown mass using **Tracker Video Analysis** software.
     * Calculated the unknown mass by inverting the SHM equation.
 
 ## Mathematical Models
@@ -25,10 +25,10 @@ $$m = \frac{k T^2}{4\pi^2} - \frac{m_s}{3}$$
 Where $m_s$ is the effective mass of the spring correction.
 
 ## Key Results
-* [cite_start]**Spring Constant ($k$):** $44.40$ N/m[cite: 1142].
-* [cite_start]**Unknown Mass Determination:** $0.535$ kg[cite: 1151].
-* [cite_start]**Methodology Comparison:** The use of video analysis (Tracker) provided significantly cleaner period data compared to manual timing methods used in previous iterations (Lab 7)[cite: 1158, 1159].
-* [cite_start]**Limitations:** Static analysis could not be used for the unknown mass validation as the specific extension data point was not captured during the trial.
+* **Spring Constant ($k$):** $44.40$ N/m.
+* **Unknown Mass Determination:** $0.535$ kg.
+* **Methodology Comparison:** The use of video analysis (Tracker) provided significantly cleaner period data compared to manual timing methods used in previous iterations (Lab 7).
+* **Limitations:** Static analysis could not be used for the unknown mass validation as the specific extension data point was not captured during the trial.
 
 ## Technologies Used
 * **Data Analysis:** Python (Pandas for data ingestion, Matplotlib for regression).
