@@ -1,42 +1,42 @@
-# Signal Acquisition & Instrumentation: Optical Waveform Analysis
+# Advanced Spring Dynamics: Mass Determination
 
 ## Project Overview
-This project focuses on the hardware-level analysis of AC-driven optical systems. Using a digital storage oscilloscope and high-speed photodiodes, I characterized the temporal modulation of various light sources (Incandescent, CFL, LED) to investigate signal rectification, frequency doubling, and thermal inertia effects in commercial electronics.
+Building on previous elasticity studies, this project utilized improved data acquisition methods (Video Analysis) to characterize a real spring and determine the mass of an unknown object[cite: 1029]. [cite_start]The experiment compared static force analysis (Hooke's Law) with dynamic oscillation modeling (Simple Harmonic Motion)[cite: 1029].
 
-## Instrumentation & Hardware Skills
-* **Data Acquisition:** Configured **Tektronix Digital Oscilloscopes** for signal capture, utilizing advanced triggering and time-base scaling to stabilize high-frequency waveforms.
-* **Transducers:** Implemented photodiode circuits to transduce optical intensity into measurable voltage signals.
-* **Signal Analysis:** Interpreted AC waveforms to identify DC offsets, ripple factors, and harmonic frequencies.
+## Methodology
+The experiment employed two physical models to characterize the system:
 
-## Physical Principles Investigated
-### 1. Frequency Doubling ($P \propto V^2$)
-Standard North American power is 60 Hz AC. Since power (brightness) is proportional to voltage squared ($P = V^2/R$), the light intensity oscillates at $2f = 120$ Hz. [cite_start]This was experimentally verified in the Incandescent and LED trials[cite: 1194, 1196, 1203].
+1.  **Static Characterization:**
+    * [cite_start]Measured spring extension ($\Delta x$) under known loads ($F$)[cite: 1030, 1049].
+    * [cite_start]Calculated the Spring Constant ($k$) via linear regression[cite: 1051].
+2.  **Dynamic Mass Determination:**
+    * [cite_start]Captured high-frame-rate video of the oscillating system[cite: 1053].
+    * [cite_start]Extracted the period ($T$) of the unknown mass using **Tracker Video Analysis** software[cite: 1053].
+    * [cite_start]Calculated the unknown mass by inverting the SHM equation[cite: 1054].
 
-### 2. Full-Wave Rectification (LEDs)
-LEDs require DC current. [cite_start]The observed 120 Hz "ripple" waveform indicates the presence of an internal **Full-Bridge Rectifier**, which flips the negative AC cycle to positive, creating a pulsed DC signal[cite: 1204, 1207].
+## Mathematical Models
+### 1. Static Model (Hooke's Law)
+$$F = k \Delta x$$
+* [cite_start]**Slope:** Spring Constant ($k$)[cite: 1032].
 
-### 3. Thermal Inertia (Incandescent)
-The incandescent waveform exhibited a massive DC offset (never dropping to zero). [cite_start]This quantifies the **thermal mass** of the tungsten filament, which retains heat (and light emission) even as the driving voltage crosses zero[cite: 1198, 1200].
+### 2. Dynamic Model (SHM)
+The mass ($m$) is derived from the oscillation period ($T$) and the previously determined stiffness ($k$):
+$$m = \frac{k T^2}{4\pi^2} - \frac{m_s}{3}$$
+[cite_start]Where $m_s$ is the effective mass of the spring correction[cite: 1037, 1086].
 
 ## Key Results
-* **Incandescent Bulb:** 120 Hz signal with significant DC offset due to tungsten's specific heat capacity.
-* **LED:** 120 Hz signal with sharp ripples, characteristic of capacitor-smoothed rectification.
-* [cite_start]**CFL (Compact Fluorescent):** Operated at mixed high frequencies (~343 Hz and ~487 Hz), demonstrating the complex switching function of electronic ballasts to minimize visible flicker[cite: 1210, 1211].
+* [cite_start]**Spring Constant ($k$):** $44.40$ N/m[cite: 1081].
+* [cite_start]**Unknown Mass Determination:** $0.535$ kg[cite: 1090].
+* [cite_start]**Methodology Comparison:** The use of video analysis (Tracker) provided significantly cleaner period data compared to manual timing methods used in previous iterations (Lab 7)[cite: 1097, 1098].
+* [cite_start]**Limitations:** Static analysis could not be used for the unknown mass validation as the specific extension data point was not captured during the trial[cite: 1092].
+
+## Technologies Used
+* **Data Analysis:** Python (Pandas for data ingestion, Matplotlib for regression).
+* [cite_start]**Computer Vision:** Tracker Video Analysis (for precise period measurement)[cite: 1040].
+* **Physics:** Classical Mechanics, Harmonic Oscillators.
 
 ## Visualizations
 
-### 1. Incandescent Thermal Inertia
-*Note the smooth sine wave and high minimum voltage (DC offset), proving the filament never fully cools down.*
-![Incandescent Scope Trace](INCAN.JPG)
-
-### 2. LED Rectification Ripple
-*The sharp "sawtooth" pattern reveals the charging and discharging cycles of the internal smoothing capacitor.*
-![LED Scope Trace](LED.JPG)
-
-### 3. CFL Electronic Ballast (Component 1)
-*Primary frequency component observed at ~343 Hz.*
-![CFL Trace 1](CFL-1.JPG)
-
-### 4. CFL Electronic Ballast (Component 2)
-*Secondary frequency component observed at ~487 Hz, showing the complex modulation of the ballast.*
-![CFL Trace 2](CFL-2.JPG)
+### 1. Static Stiffness Analysis
+*Linear regression of Force vs. Extension. The slope ($44.4$) represents the spring constant $k$.*
+![Hooke's Law Analysis](hookes_law_fit.png)
