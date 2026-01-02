@@ -38,7 +38,7 @@ The analysis for these projects is written in Python. To reproduce the graphs or
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/aarshnil/Experimental-Physics-Data-Analysis.git](https://github.com/aarshnil/Experimental-Physics-Data-Analysis.git)
+    git clone https://github.com/aarshp18/Experimental-Physics-Data-Analysis.git
     ```
 2.  **Install dependencies:**
     ```bash
