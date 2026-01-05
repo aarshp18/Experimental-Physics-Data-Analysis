@@ -4,7 +4,7 @@ This repository contains Jupyter Notebooks consisting of Python code to analyze 
 
 The goal of this repo is to demonstrate the use of Python (Numpy, Pandas, Matplotlib) for data analysis, linear regression, and error propagation in a physics lab setting.
 
-## 🛠 Tools & Libraries
+## Tools & Libraries
 * **Language:** Python 3
 * **Libraries:** `pandas`, `numpy`, `matplotlib`
 * **Software:** Tracker Video Analysis, LoggerPro
@@ -39,7 +39,7 @@ The goal of this repo is to demonstrate the use of Python (Numpy, Pandas, Matplo
 * **Focus:** Waveform analysis of AC light sources.
 * **Objective:** To measure the frequency of light intensity variations for an Incandescent bulb, Compact Fluorescent Light (CFL), and Light Emitting Diode (LED).
 
-## 🚀 How to Use
+## How to Use
 1.  Clone the repository.
 2.  Install the required libraries: `pip install pandas numpy matplotlib`
 3.  Open the `.ipynb` files in Jupyter Notebook or VS Code to see the code, graphs, and detailed explanations.
