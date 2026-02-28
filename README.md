@@ -27,7 +27,7 @@ The goal of this repo is to demonstrate the use of Python (Numpy, Pandas, Matplo
 * **Focus:** Mechanical energy in an oscillating system.
 * **Objective:** To determine the damping time constant ($\tau$) by analyzing the exponential decay of total mechanical energy over time.
 
-### **Lab 7: Springs I **
+### **Lab 7: Springs I**
 * **Focus:** Hooke's Law vs. Simple Harmonic Motion (SHM).
 * **Objective:** To find the spring constant ($k$) of a rubber band using static extension (Hooke's Law) vs. dynamic oscillation (SHM) and compare the results.
 
